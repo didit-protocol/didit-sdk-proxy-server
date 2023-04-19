@@ -11,8 +11,8 @@ You can find some `demo implementations`  in the [examples](https://github.com/g
 
 For more info on the SDK refer to [here](https://docs.dev.didit.me/docs/sdk)
 
-## How does the authenthication flow works?
+## How does the Authentication Flow works?
 <img width="1194" alt="Captura de pantalla 2023-04-19 a las 7 16 10" src="https://user-images.githubusercontent.com/122447379/232973478-bca41d1c-1cea-4259-aa6d-b20f95117258.png">
 
 
-For more info on the authenthication Flow refere [here](https://docs.dev.didit.me/docs/didit_flow/plugin_access_flow) or try [this example](https://docs.dev.didit.me/docs/demo_authentication_flow)
+For more info on the Authentication Flow refere [here](https://docs.dev.didit.me/docs/didit_flow/authentication_flow) or try [this example](https://docs.dev.didit.me/docs/demo_authentication_flow)
