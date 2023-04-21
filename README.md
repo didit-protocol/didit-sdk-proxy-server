@@ -7,12 +7,12 @@ You can find some `demo implementations`  in the [examples](https://github.com/g
 
 ## How does the proxy server works?
 
-<img width="412" alt="Captura de pantalla 2023-04-19 a las 7 14 20" src="https://user-images.githubusercontent.com/122447379/232973162-b4a9a613-fa13-4573-a6ed-28e07835e6d0.png">
+<img alt="How Didit SDK works" src="https://docs.dev.didit.me/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsdk_works.5dcf3190.png&w=3840&q=75">
 
 For more info on the SDK refer to [here](https://docs.dev.didit.me/docs/sdk)
 
 ## How does the Authentication Flow works?
-<img width="1194" alt="Captura de pantalla 2023-04-19 a las 7 16 10" src="https://user-images.githubusercontent.com/122447379/232973478-bca41d1c-1cea-4259-aa6d-b20f95117258.png">
+<img alt="How Didit proxy server works" src="https://docs.dev.didit.me/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fproxy_server_works.f6c28ce0.png&w=3840&q=75">
 
 
 For more info on the Authentication Flow refere [here](https://docs.dev.didit.me/docs/didit_flow/authentication_flow) or try [this example](https://docs.dev.didit.me/docs/demo_authentication_flow)
