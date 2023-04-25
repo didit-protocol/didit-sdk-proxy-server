@@ -16,11 +16,11 @@ app.add_middleware(CORSMiddleware, allow_origins=origins, allow_credentials=True
 
 @app.post('/wallet_authorization')
 async def wallet_authorization(
-    scope: Optional[str] = Form(None),
     wallet_address: str = Form(...),
-    claims: Optional[str] = Form(None)
 ):
     auth = base64.b64encode(f"{os.environ['CLIENT_ID']}:{os.environ['CLIENT_SECRET']}".encode('utf-8')).decode('utf-8')
+    scope = os.environ['SCOPE']
+    claims = os.environ['CLAIMS']
 
     headers = {
         'Content-Type': 'application/json',

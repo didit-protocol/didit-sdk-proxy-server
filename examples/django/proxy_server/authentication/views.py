@@ -10,9 +10,9 @@ import requests
 
 @api_view(['POST'])
 def wallet_authorization(request):
-    scope = request.data.get('scope')
     wallet_address = request.data.get('wallet_address')
-    claims = request.data.get('claims')
+    scope = os.environ['SCOPE']
+    claims = os.environ['CLAIMS']
 
     if not wallet_address:
         return Response({'detail': 'wallet_address is required'}, status=status.HTTP_400_BAD_REQUEST)
