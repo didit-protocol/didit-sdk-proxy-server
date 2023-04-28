@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from fastapi import FastAPI, Form
+from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from typing import Optional
 
@@ -34,7 +35,7 @@ async def wallet_authorization(
     }
 
     response = requests.post(f"{os.environ['API_URL']}wallet_authorization/", json=data, headers=headers)
-    return response.json()
+    return JSONResponse(content=response.json(), status_code=response.status_code)
 
 @app.post('/token')
 async def token(
@@ -55,4 +56,4 @@ async def token(
     }
 
     response = requests.post(f"{os.environ['API_URL']}token/", json=data, headers=headers)
-    return response.json()
+    return JSONResponse(content=response.json(), status_code=response.status_code)
