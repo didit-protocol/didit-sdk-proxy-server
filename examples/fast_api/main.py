@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from fastapi import FastAPI, Form
+from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from typing import Optional
 
@@ -28,17 +29,13 @@ async def wallet_authorization(
     }
 
     data = {
-        'grant_type': 'https://gamium.world/oauth/grant_types/connectwallet',
         'scope': scope,
         'wallet_address': wallet_address,
         'claims': claims
     }
 
     response = requests.post(f"{os.environ['API_URL']}wallet_authorization/", json=data, headers=headers)
-
-    response.raise_for_status()
-
-    return response.json()
+    return JSONResponse(content=response.json(), status_code=response.status_code)
 
 @app.post('/token')
 async def token(
@@ -59,7 +56,4 @@ async def token(
     }
 
     response = requests.post(f"{os.environ['API_URL']}token/", json=data, headers=headers)
-
-    response.raise_for_status()
-
-    return response.json()
+    return JSONResponse(content=response.json(), status_code=response.status_code)
