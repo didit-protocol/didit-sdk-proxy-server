@@ -25,17 +25,13 @@ def wallet_authorization(request):
     }
 
     data = {
-        'grant_type': 'https://gamium.world/oauth/grant_types/connectwallet',
         'scope': scope,
         'wallet_address': wallet_address,
         'claims': claims
     }
 
     response = requests.post(f"{os.environ['API_URL']}wallet_authorization/", json=data, headers=headers)
-
-    response.raise_for_status()
-
-    return Response(response.json(), status=status.HTTP_200_OK)
+    return Response(response.json(), status=response.status_code)
 
 @api_view(['POST'])
 def token(request):
@@ -59,7 +55,4 @@ def token(request):
     }
 
     response = requests.post(f"{os.environ['API_URL']}token/", json=data, headers=headers)
-
-    response.raise_for_status()
-
-    return Response(response.json(), status=status.HTTP_200_OK)
+    return Response(response.json(), status=response.status_code)
