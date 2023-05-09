@@ -24,7 +24,6 @@ async def wallet_authorization(
     claims = os.environ['CLAIMS']
 
     headers = {
-        'Content-Type': 'application/json',
         'Authorization': f'Basic {auth}',
     }
 
@@ -45,7 +44,6 @@ async def token(
     auth = base64.b64encode(f"{os.environ['CLIENT_ID']}:{os.environ['CLIENT_SECRET']}".encode('utf-8')).decode('utf-8')
 
     headers = {
-        'Content-Type': 'application/json',
         'Authorization': f'Basic {auth}',
     }
 

@@ -20,7 +20,6 @@ def wallet_authorization(request):
     auth = base64.b64encode(f"{os.environ['CLIENT_ID']}:{os.environ['CLIENT_SECRET']}".encode('utf-8')).decode('utf-8')
 
     headers = {
-        'Content-Type': 'application/json',
         'Authorization': f'Basic {auth}',
     }
 
@@ -44,7 +43,6 @@ def token(request):
     auth = base64.b64encode(f"{os.environ['CLIENT_ID']}:{os.environ['CLIENT_SECRET']}".encode('utf-8')).decode('utf-8')
 
     headers = {
-        'Content-Type': 'application/json',
         'Authorization': f'Basic {auth}',
     }
 
